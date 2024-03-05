@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: 
       - main
-      # comment
+      # comment 1 05.03.2024
       
 env:
    DOCKER_REPOSITORY: erankorish # name of Docker Hub ID
