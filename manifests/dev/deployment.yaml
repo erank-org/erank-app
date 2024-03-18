@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gh-nodejs-app2
-  namespace: dev
+  name: erank-app
+  namespace: erank
   labels:
-    app: gh-nodejs-app2
-    env: dev
+    app: erank-app
+    env: erank
 spec:
   selector:
     matchLabels:
-      app: gh-nodejs-app2
+      app: erank-app
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -19,10 +19,10 @@ spec:
   template:
     metadata:
       labels:
-        app: gh-nodejs-app2
+        app: erank-app
     spec:
       containers:
-      - name: gh-nodejs-app2
+      - name: erank-app
         image: {{ IMAGE_CONTAINER }}
         #image: docker.io/aquasaemea/gh-nodejs-app2:latest
         imagePullPolicy: Always
